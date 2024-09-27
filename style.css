@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e0f7fa;
+    overflow-x: hidden;
+  }
+  
+  #tree-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #tree {
+    width: 520px; /* Adjust size based on your tree image */
+    height: auto; /* Keep aspect ratio */
+  }
+  
+  /* Positioning the score inside the tree container */
+  #score {
+    position: absolute;
+    top: 10px; /* Adjust to position as needed */
+    left: 10px; /* Adjust to position as needed */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Apple styling */
+  .apple {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-image: url('apple.png'); /* Using the realistic apple image */
+    background-size: cover;
+    cursor: pointer;
+    animation: grow 1s ease-in-out forwards; /* Animation for growing */
+  }
+  
+  @keyframes grow {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(290px); } /* Fall down by 500px */
+  }
+  
+  /* Falling apple animation */
+  .apple.falling {
+    animation: fall 3s linear forwards; /* Linear fall for constant speed */
+  }
+  
